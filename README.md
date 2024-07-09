@@ -42,3 +42,36 @@ Time Slot Constraints: Courses cannot overlap in time for the same set of studen
 Lecture Hour Constraints: Adjusted to ensure proper distribution of timeslots based on lecture hours. 
 
  And so on
+ ==============
+ 
+ For small_Scheduling.py
+ 
+ Code Explanation
+ 
+
+Define Variables and Data:
+
+	rooms, courses, course_lecture_hours, professors, batches, days, and hours.
+	course_rooms assigns static rooms to courses
+	
+Variables:
+	course_assignment[(course, day, hour)]: Boolean variable indicating if a course is scheduled at a specific day and hour.
+
+
+Constraints:
+
+	Room Constraints: Ensures no two courses are scheduled in the same room at the same time.
+	Professor Constraints: Ensures professors do not teach more than one course simultaneously.
+	Time Slot Constraints: Ensures courses do not overlap for the same batch of students.
+	Lecture Hour Constraints: Adjusted to ensure proper distribution of timeslots based on lecture hours.
+
+
+Solver:
+
+	Create the solver and solve the model.
+	Print the solution in a readable table format using PrettyTable.
+
+
+Validation:
+	Check room, professor, batch, and lecture hour constraints to ensure the solution's validity.
+ 
